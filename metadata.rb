@@ -1,4 +1,4 @@
-name 'mongodb--server'
+name 'mongodb-server'
 maintainer 'The Authors'
 maintainer_email 'you@example.com'
 license 'All Rights Reserved'
