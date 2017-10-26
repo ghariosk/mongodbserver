@@ -35,8 +35,8 @@ template '/etc/systemd/system/mongodb.service' do
 end
 
 
-template '/etc/mongodb.conf' do
-	source 'mongodb.conf.erb'
+template '/etc/mongod.conf' do
+	source 'mongod.conf.erb'
 	owner 'root'
 	group 'root'
 	mode '0755'
