@@ -23,7 +23,7 @@ describe 'mongodb--server::default' do
       expect(chef_run).to upgrade_package 'mongodb-org'
     end
 
-    it 'shoudl enable the database' do
+    it 'should enable the database' do
       expect(chef_run).to enable_service 'mongodb'
     end
 
