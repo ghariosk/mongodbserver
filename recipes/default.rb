@@ -17,7 +17,6 @@ apt_repository "mongodb-org" do
   	key "EA312927"
   	distribution "xenial/mongodb-org/3.2"
   	components ["multiverse"]
-  	action :create
 end
 
 apt_update #apt repository maybe doing it source list
