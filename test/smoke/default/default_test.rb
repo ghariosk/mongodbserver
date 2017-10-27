@@ -20,12 +20,21 @@ end
 
 describe package 'mongodb-org' do
 	it {should be_installed}
+	 its('version'){ should match /3\.2\../ }
 end
 
 describe port(27017) do
 	it {should be_listening}
+	its('addresses'){should include '0.0.0.0' }
 end
 
-describe command('mongod --version') do
-  its(:stdout) { should match /3\.2\../ }
+# describe command('mongodb --version') do
+
+# end
+
+describe service 'mongodb' do
+	it {should be_running}
+	it {should be_enabled}
 end
+
+

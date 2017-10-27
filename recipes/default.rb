@@ -1,5 +1,5 @@
 #
-# Cookbook:: mongodb--server
+# Cookbook:: mongodb-server
 # Recipe:: default
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
@@ -27,11 +27,15 @@ end
 
 
 
+
+
+
 template '/etc/systemd/system/mongodb.service' do
 	source 'mongodb.service.erb'
 	owner 'root'
 	group 'root'
 	mode '0755'
+	notifies :restart, 'service[mongodb]'
 end
 
 
@@ -40,12 +44,14 @@ template '/etc/mongod.conf' do
 	owner 'root'
 	group 'root'
 	mode '0755'
+	notifies :restart, 'service[mongodb]'
 end
 
 service 'mongodb' do 
  supports status: true, restart: true, reload: true
  action [:unmask, :enable, :start]
 end
+
 
 
 

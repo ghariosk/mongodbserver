@@ -20,7 +20,7 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[mongodb--server::default]
+      - recipe[mongodb-server::default]
     verifier:
       inspec_tests:
         - test/smoke/default

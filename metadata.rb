@@ -3,8 +3,8 @@ maintainer 'The Authors'
 maintainer_email 'you@example.com'
 license 'All Rights Reserved'
 description 'Installs/Configures mongodb-server'
-long_description 'Installs/Configures mongodb--server'
-version '0.1.4'
+long_description 'Installs/Configures mongodb-server'
+version '0.1.5'
 chef_version '>= 12.1' if respond_to?(:chef_version)
 
 # The `issues_url` points to the location where issues for this cookbook are
